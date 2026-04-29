@@ -1,0 +1,32 @@
+spring:
+  config:
+    import: optional:file:env.properties
+  main:
+    banner-mode: log
+  ai:
+    azure:
+      openai:
+        api-key: ${AZURE_OPENAI_API_KEY}
+        endpoint: ${AZURE_OPENAI_ENDPOINT}
+        chat:
+          options:
+            deployment-name: ${AZURE_OPENAI_DEPLOYMENT_NAME}
+  datasource:
+    url: jdbc:sqlserver://;serverName=${DATABASE_URL};databaseName=${DATABASE_NAME};encrypt=true;trustServerCertificate=true;portNumber=${DATABASE_PORT};
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
+    hikari:
+      connection-timeout: 10000
+      initialization-fail-timeout: -1
+      minimum-idle: 1
+logging:
+  file:
+    name: .james/james.log
+  level:
+    dev.mvlcak.james: INFO
+james:
+  tui:
+    app-name: James
+    tick-rate-ms: 75
+    resize-grace-period-ms: 50
