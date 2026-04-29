@@ -1,9 +1,9 @@
 package dev.mvlcak.james.ai.config;
 
+import dev.mvlcak.james.ai.tool.DiffTool;
 import dev.mvlcak.james.ai.tool.SchemaSearchTools;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springaicommunity.agent.tools.DiffTool;
 import org.springaicommunity.agent.tools.FileSystemTools;
 import org.springaicommunity.agent.tools.GrepTool;
 import org.springaicommunity.agent.tools.ShellTools;

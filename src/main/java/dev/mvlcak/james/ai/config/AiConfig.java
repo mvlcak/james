@@ -1,10 +1,10 @@
 package dev.mvlcak.james.ai.config;
 
+import dev.mvlcak.james.ai.tool.DiffTool;
 import dev.mvlcak.james.ai.tool.SchemaSearchTools;
 import dev.mvlcak.james.chat.StreamingChatService;
 import dev.mvlcak.james.event.AppEventBus;
 import dev.mvlcak.james.tui.JamesAppState;
-import org.springaicommunity.agent.tools.DiffTool;
 import org.springaicommunity.agent.tools.FileSystemTools;
 import org.springaicommunity.agent.tools.GrepTool;
 import org.springaicommunity.agent.tools.ShellTools;

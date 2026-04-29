@@ -245,6 +245,9 @@
       "type": "com.fasterxml.jackson.annotation.JsonInclude"
     },
     {
+      "type": "com.fasterxml.jackson.annotation.JsonPropertyDescription"
+    },
+    {
       "type": "com.fasterxml.jackson.core.JsonFactory",
       "methods": [
         {
@@ -481,7 +484,7 @@
             "org.springaicommunity.agent.tools.FileSystemTools",
             "org.springaicommunity.agent.tools.ShellTools",
             "org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor",
-            "org.springaicommunity.agent.tools.DiffTool",
+            "dev.mvlcak.james.ai.tool.DiffTool",
             "dev.mvlcak.james.ai.tool.SchemaSearchTools"
           ]
         },
@@ -625,11 +628,46 @@
       ]
     },
     {
+      "type": "dev.mvlcak.james.ai.tool.DiffTool",
+      "methods": [
+        {
+          "name": "diff",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.String",
+            "java.lang.String",
+            "java.lang.String",
+            "java.lang.Integer",
+            "dev.mvlcak.james.ai.tool.DiffTool$WhitespaceMode"
+          ]
+        },
+        {
+          "name": "diffFiles",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.String",
+            "java.lang.Integer",
+            "dev.mvlcak.james.ai.tool.DiffTool$WhitespaceMode"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dev.mvlcak.james.ai.tool.DiffTool$WhitespaceMode"
+    },
+    {
       "type": "dev.mvlcak.james.ai.tool.SchemaSearchTools",
       "methods": [
         {
           "name": "findTables",
           "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "getTableScript",
+          "parameterTypes": [
+            "java.lang.String",
             "java.lang.String"
           ]
         }
@@ -648,13 +686,13 @@
       "type": "dev.mvlcak.james.tui.ChatPane"
     },
     {
+      "type": "dev.mvlcak.james.tui.CommandParser"
+    },
+    {
       "type": "dev.mvlcak.james.tui.JamesAppState"
     },
     {
       "type": "dev.mvlcak.james.tui.JamesTuiApp"
-    },
-    {
-      "type": "dev.mvlcak.james.tui.command.CommandParser"
     },
     {
       "type": "dev.mvlcak.james.tui.config.JamesConfig",
@@ -732,7 +770,7 @@
           "name": "chatPane",
           "parameterTypes": [
             "dev.mvlcak.james.tui.JamesAppState",
-            "dev.mvlcak.james.tui.command.CommandParser",
+            "dev.mvlcak.james.tui.CommandParser",
             "dev.mvlcak.james.event.AppEventBus"
           ]
         },
@@ -2305,10 +2343,24 @@
       "type": "org.slf4j.helpers.Log4jLoggerFactory"
     },
     {
-      "type": "org.springaicommunity.agent.tools.DiffTool"
-    },
-    {
-      "type": "org.springaicommunity.agent.tools.FileSystemTools"
+      "type": "org.springaicommunity.agent.tools.FileSystemTools",
+      "methods": [
+        {
+          "name": "read",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.Integer",
+            "java.lang.Integer"
+          ]
+        },
+        {
+          "name": "write",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.String"
+          ]
+        }
+      ]
     },
     {
       "type": "org.springaicommunity.agent.tools.GrepTool"
@@ -4883,6 +4935,9 @@
       "type": "reactor.core.publisher.MonoCreate$DefaultMonoSink"
     },
     {
+      "type": "reactor.core.publisher.MonoDelay$MonoDelayRunnable"
+    },
+    {
       "type": "reactor.core.publisher.MonoFlatMap$FlatMapMain"
     },
     {
@@ -4920,6 +4975,9 @@
     },
     {
       "type": "reactor.core.scheduler.BoundedElasticScheduler$BoundedState"
+    },
+    {
+      "type": "reactor.core.scheduler.ParallelScheduler"
     },
     {
       "type": "reactor.core.scheduler.SchedulerTask"
