@@ -628,29 +628,7 @@
       ]
     },
     {
-      "type": "dev.mvlcak.james.ai.tool.DiffTool",
-      "methods": [
-        {
-          "name": "diff",
-          "parameterTypes": [
-            "java.lang.String",
-            "java.lang.String",
-            "java.lang.String",
-            "java.lang.String",
-            "java.lang.Integer",
-            "dev.mvlcak.james.ai.tool.DiffTool$WhitespaceMode"
-          ]
-        },
-        {
-          "name": "diffFiles",
-          "parameterTypes": [
-            "java.lang.String",
-            "java.lang.String",
-            "java.lang.Integer",
-            "dev.mvlcak.james.ai.tool.DiffTool$WhitespaceMode"
-          ]
-        }
-      ]
+      "type": "dev.mvlcak.james.ai.tool.DiffTool"
     },
     {
       "type": "dev.mvlcak.james.ai.tool.DiffTool$WhitespaceMode"
@@ -2343,24 +2321,7 @@
       "type": "org.slf4j.helpers.Log4jLoggerFactory"
     },
     {
-      "type": "org.springaicommunity.agent.tools.FileSystemTools",
-      "methods": [
-        {
-          "name": "read",
-          "parameterTypes": [
-            "java.lang.String",
-            "java.lang.Integer",
-            "java.lang.Integer"
-          ]
-        },
-        {
-          "name": "write",
-          "parameterTypes": [
-            "java.lang.String",
-            "java.lang.String"
-          ]
-        }
-      ]
+      "type": "org.springaicommunity.agent.tools.FileSystemTools"
     },
     {
       "type": "org.springaicommunity.agent.tools.GrepTool"
@@ -4935,9 +4896,6 @@
       "type": "reactor.core.publisher.MonoCreate$DefaultMonoSink"
     },
     {
-      "type": "reactor.core.publisher.MonoDelay$MonoDelayRunnable"
-    },
-    {
       "type": "reactor.core.publisher.MonoFlatMap$FlatMapMain"
     },
     {
@@ -4975,9 +4933,6 @@
     },
     {
       "type": "reactor.core.scheduler.BoundedElasticScheduler$BoundedState"
-    },
-    {
-      "type": "reactor.core.scheduler.ParallelScheduler"
     },
     {
       "type": "reactor.core.scheduler.SchedulerTask"
